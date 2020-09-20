@@ -1,0 +1,16 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+   <label>Part Number</label>
+    <input class="form-control" type="text" formControlName="partNumber"
+    >
+    <div *ngIf="submitted && f.partNumber.error?.required" class="alert-danger">
+       Please enter valid part number
+       </div>
+   <label>Dimensions</label> <input type="text" formControlName="dimensions">
+   <label>Weight</label> <input type="text" formControlName="weight">
+   <label>Type Of product</label> <input type="text" formControlName="typeOfProd">
+   <label>Description</label> <input type="text" formControlName="description"> 
+   <label>Image</label><input type="file" (change)="uploadDocument($event)" >
+<button type="submit">Submit</button>
+
+    </form>
+  

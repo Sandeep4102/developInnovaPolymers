@@ -1,0 +1,15 @@
+<div class="col-md-3" *ngFor = "let prod of objListWithProduct">
+	<figure class="card card-product">
+		<div class="img-wrap"> <img src="{{prod.url}}">
+		</div>
+		<figcaption class="info-wrap">
+			<h6 class="title text-dots"><a href="#">{{prod.type}}</a></h6>
+			<div class="action-wrap">
+				<a href="#" class="btn btn-primary btn-sm float-right"> Order </a>
+				<div class="price-wrap h5">
+					<span class="price-new">$280</span>
+				</div> <!-- price-wrap.// -->
+			</div> <!-- action-wrap -->
+		</figcaption>
+	</figure> <!-- card // -->
+</div>

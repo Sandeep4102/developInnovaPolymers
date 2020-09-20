@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+
+  .bot-contact {
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(3,3,61,1) 4%, rgba(7,45,12,1) 82%);
+    height: 40vh;
+    width:99vw;
+    font-family: sans-serif;
+    position:bottom;
+    bottom:20%;
+    padding:20px;
+    box-sizing: border-box;
+    border-radius:1px;
+    box-shadow: 5px 10px 18px rgb(1, 7, 85);
+    display:flex;
+
+  }
+  .bot-contact .map-img {
+    padding-left:100px;
+    width:160px;
+    height:180px;
+    flex:0 0 150px;
+    align-content:left;
+  }
+  .bot-contact .map-img img {
+    max-width:160px;
+  }
+  .bot-contact .info{
+    max-width:600px;
+    text-align: right;
+    padding-right: 20px;
+    padding:10px;
+  }
+
+  
+  .background {
+    width: 100vw;
+    height: 140vh;
+    background-image: url("../../../assets/images/bg_img.jpg");
+  }
+  
+  $particleSize: 20vmin;
+  $animationDuration: 6s;
+  $amount: 20;
+  .background span {
+    width: $particleSize;
+    height: $particleSize;
+    border-radius: $particleSize;
+    backface-visibility: hidden;
+    position: absolute;
+    animation-name: move;
+    animation-duration: $animationDuration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    $colors: (
+      #81971d,
+      #E45A84,
+      #FFACAC
+    );
+    @for $i from 1 through $amount {
+      &:nth-child(#{$i}) {
+        color: nth($colors, random(length($colors)));
+        top: random(100) * 1%;
+        left: random(100) * 1%;
+        animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+        animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+        transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+        $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+        $x: if(random() > 0.5, -1, 1);
+        box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+      }
+    }
+  }
+  
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+  }
+
+  .slider-image-section .owl-stage-outer, .slider-image-section .owl-stage, .slider-image-section .owl-item, .slider-image-section .owl-item .item, .slider-image-section .owl-item .item img{
+    height: 480px;
+}
+
+.owl-nav{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.owl-nav button {
+    position: absolute;
+    outline: none;
+}
+
+.owl-prev{
+    left: 20px;
+}
+
+.owl-prev.disabled span{
+    color: #a78c8cbd;
+}
+
+.owl-next{
+    right: 20px;
+}
+
+.owl-next.disabled span{
+    color: #a78c8cbd;
+}
+
+.owl-nav button span{
+    line-height: 0px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.owl-carousel-holder{
+  width:100%;
+  float: left;
+}
+
+.carousel-section{
+  width: 100%;
+  height: 400px;
+  float: left;
+  margin-top: 60px;
+}
+
+.slider-image-section{
+  width: 100%;
+  height:480px;
+  float: left;
+}
