@@ -1,4 +1,17 @@
-<div class="container">
+
+<div class="w3-content">
+	<img class="mySlides" src="../../../assets/home/bg_img.jpg" alt="custom_html_banner1" style="    width: 100%;
+    max-height: 400px;
+    max-width: 1714px;
+">
+	<!-- <img   class="mySlides" [src]="imageCar[0]" alt="custom_html_banner1" style="width:100%">
+	<button class="w3-button w3-black w3-display-left" (click)="plusDivs('left')">&#10094;</button>
+	<button class="w3-button w3-black w3-display-right" (click)="plusDivs('right')">&#10095;</button> -->
+   </div>
+
+
+ <div class="container-fluid" style="background-image: url('../../../assets/images/bg_img.jpg')">
+<div class="container" >
 <div class="row">
 	<div class="col-md-4" *ngFor="let prod of objListWithProduct">
 <mat-card class="example-card" >
@@ -27,17 +40,24 @@
 	 </div>
 	 <div class="row">
 		<div class="col">
+			 <strong>Weight:</strong>{{prod.weight}}
+
+		 </div>
+	 </div>
+	 <div class="row">
+		<div class="col">
 			 <strong>Description:</strong>{{prod.description}}
 
 		 </div>
 	 </div>
 	</mat-card-content>
 	<mat-card-actions>
-	  <button mat-button>EDIT</button>
-	  <button mat-button>DELETE</button>
+	  <!-- <button mat-button>EDIT</button>
+	  <button mat-button>DELETE</button> -->
 	</mat-card-actions>
   </mat-card>
   </div>
   </div>
+</div>
 </div>
   

@@ -12,7 +12,7 @@ export class RegisteruserComponent implements OnInit {
   public listProducts : any = []
   public objListWithProduct : any  = []
   public newObj : any = {}
-
+  public imageCar : any = ['../../../assets/images/bg-01.jpg','../../../assets/images/bg_img.jpg']
   constructor(
 
     private http: HttpClient,
@@ -22,6 +22,8 @@ export class RegisteruserComponent implements OnInit {
  
   ngOnInit() {
     this.getProd()
+
+    
   }
   getProd()
   {
@@ -59,5 +61,29 @@ export class RegisteruserComponent implements OnInit {
      console.log(this.objListWithProduct,"cfghvbjknlm");
     })
   }
+
+
+  // plusDivs(val)
+  // {
+  
+  //   if(val === 'right')
+  //   {
+  //     console.log(val,"vall");
+  
+  //       this.imageCar[0]=this.imageCar[1]
+
+  //   }
+
+  //   if(val === 'left')
+  //   {
+  //     console.log(val,'vall');
+      
+  //       this.imageCar[1]=this.imageCar[0]
+
+  //   }
+
+    
+  // }
+
 
 }
