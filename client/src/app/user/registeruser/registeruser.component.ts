@@ -22,6 +22,9 @@ export class RegisteruserComponent implements OnInit {
  
   ngOnInit() {
     this.getProd()
+    // setTimeout(() => {
+    //   this.plusDivs('right')
+    // },3000);
 
     
   }
@@ -63,27 +66,27 @@ export class RegisteruserComponent implements OnInit {
   }
 
 
-  // plusDivs(val)
-  // {
+  plusDivs(val)
+  {
   
-  //   if(val === 'right')
-  //   {
-  //     console.log(val,"vall");
-  
-  //       this.imageCar[0]=this.imageCar[1]
+    if(val === 'right')
+    {
+      console.log(val,"vall");
+           
+        this.imageCar[0]=this.imageCar[1]
 
-  //   }
+    }
 
-  //   if(val === 'left')
-  //   {
-  //     console.log(val,'vall');
+    if(val === 'left')
+    {
+      console.log(val,'vall');
       
-  //       this.imageCar[1]=this.imageCar[0]
+        this.imageCar[1]=this.imageCar[0]
 
-  //   }
+    }
 
     
-  // }
+  }
 
 
 }
