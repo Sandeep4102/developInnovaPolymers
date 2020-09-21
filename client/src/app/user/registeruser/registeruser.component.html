@@ -1,15 +1,43 @@
-<div class="col-md-3" *ngFor = "let prod of objListWithProduct">
-	<figure class="card card-product">
-		<div class="img-wrap"> <img src="{{prod.url}}">
+<div class="container">
+<div class="row">
+	<div class="col-md-4" *ngFor="let prod of objListWithProduct">
+<mat-card class="example-card" >
+	<mat-card-header>
+	  <div mat-card-avatar class="example-header-image"></div>
+	  <!-- <mat-card-title>Shiba Inu</mat-card-title>
+	  <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+	</mat-card-header>
+	<img mat-card-image *ngIf="prod.url" style="max-height: 200px;max-width: 200px;" src={{prod.url}} alt="Photo of a Shiba Inu">
+	<img mat-card-image *ngIf="!prod.url" style="max-height: 200px;max-width: 200px;" src='../../../assets/NoImageFound.jpg' alt="Photo of a Shiba Inu">
+	<mat-card-content>
+     <div class="row">
+		 <div class="col">
+			 <strong>Part Number:</strong>{{prod.partNumber}}
+		 </div>
+	 </div>
+	 <div class="row">
+		<div class="col">
+			 <strong>Dimensions:</strong>{{prod.dimensions}}
 		</div>
-		<figcaption class="info-wrap">
-			<h6 class="title text-dots"><a href="#">{{prod.type}}</a></h6>
-			<div class="action-wrap">
-				<a href="#" class="btn btn-primary btn-sm float-right"> Order </a>
-				<div class="price-wrap h5">
-					<span class="price-new">$280</span>
-				</div> <!-- price-wrap.// -->
-			</div> <!-- action-wrap -->
-		</figcaption>
-	</figure> <!-- card // -->
+	 </div>
+	 <div class="row">
+		<div class="col">
+			 <strong>Type of Product:</strong>{{prod.typeOfProd}}
+		</div>
+	 </div>
+	 <div class="row">
+		<div class="col">
+			 <strong>Description:</strong>{{prod.description}}
+
+		 </div>
+	 </div>
+	</mat-card-content>
+	<mat-card-actions>
+	  <button mat-button>EDIT</button>
+	  <button mat-button>DELETE</button>
+	</mat-card-actions>
+  </mat-card>
+  </div>
+  </div>
 </div>
+  

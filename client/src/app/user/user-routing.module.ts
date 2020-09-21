@@ -11,7 +11,7 @@ import {CatalogControlComponent} from "./catalog-control/catalog-control.compone
 import {AuthGuard} from '../utility/auth.guard'
 const routes: Routes = [
   { path: "login", component: LoginuserComponent },
-  { path: "register", component: RegisteruserComponent },
+  { path: "Product", component: RegisteruserComponent },
   { path: "verify", component: VerifyComponent },
   {path:"aboutUs",component:AboutUsComponent},
   {path:"termsConditions",component:TermsConditionsComponent},

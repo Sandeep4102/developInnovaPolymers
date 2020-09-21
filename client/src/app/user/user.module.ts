@@ -13,6 +13,7 @@ import { AuthService } from "../utility/auth.service";
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { CatalogControlComponent } from './catalog-control/catalog-control.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CatalogControlComponent } from './catalog-control/catalog-control.compo
     UserRoutingModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [AuthService]
 })
