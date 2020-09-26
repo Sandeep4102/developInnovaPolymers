@@ -12,7 +12,7 @@ import { FileUploadModule } from "ng2-file-upload";
 import { HttpClientModule } from "@angular/common/http";
 import { UserService } from "../utility/user.service";
 import { SidebarComponent } from "./sidebar/sidebar.component";
-import { MyfriendComponent } from "./myfriend/myfriend.component";
+// import { MyfriendComponent } from "./myfriend/myfriend.component";
 import { FriendrequestComponent } from "./friendrequest/friendrequest.component";
 import { FindfriendComponent } from "./findfriend/findfriend.component";
 import { FakepathComponent } from "./fakepath/fakepath.component";
@@ -23,7 +23,7 @@ import { FakepathComponent } from "./fakepath/fakepath.component";
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    MyfriendComponent,
+    // MyfriendComponent,
     FriendrequestComponent,
     FindfriendComponent,
     FakepathComponent

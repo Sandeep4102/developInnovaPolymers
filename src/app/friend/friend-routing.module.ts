@@ -3,10 +3,10 @@ import { Routes, RouterModule } from "@angular/router";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HomeComponent } from "../user/home/home.component";
 import { AuthGuard } from "../utility/auth.guard";
-import { MyfriendComponent } from "./myfriend/myfriend.component";
+// import { MyfriendComponent } from "./myfriend/myfriend.component";
 import { FriendrequestComponent } from "./friendrequest/friendrequest.component";
 import { FindfriendComponent } from "./findfriend/findfriend.component";
-import { MyfileComponent } from "../sharefile/myfile/myfile.component";
+// import { MyfileComponent } from "../sharefile/myfile/myfile.component";
 import { FileuploadComponent } from "../sharefile/fileupload/fileupload.component";
 import { FriendFileComponent } from "../sharefile/friend-file/friend-file.component";
 
@@ -19,10 +19,10 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuard],
     children: [
-      {
-        path: "myfriend",
-        component: MyfriendComponent
-      },
+      // {
+      //   path: "myfriend",
+      //   component: MyfriendComponent
+      // },
       {
         path: "request",
         component: FriendrequestComponent
@@ -31,7 +31,7 @@ const routes: Routes = [
         path: "findfriend",
         component: FindfriendComponent
       },
-      { path: "myfile", component: MyfileComponent },
+      // { path: "myfile", component: MyfileComponent },
       { path: "friendfile", component: FriendFileComponent }
     ]
   },

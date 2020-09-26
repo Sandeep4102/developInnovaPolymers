@@ -5,11 +5,11 @@ import { SharefileRoutingModule } from "./sharefile-routing.module";
 import { FileuploadComponent } from "./fileupload/fileupload.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { MyfileComponent } from "./myfile/myfile.component";
+// import { MyfileComponent } from "./myfile/myfile.component";
 import { FriendFileComponent } from "./friend-file/friend-file.component";
 
 @NgModule({
-  declarations: [FileuploadComponent, MyfileComponent, FriendFileComponent],
+  declarations: [FileuploadComponent, FriendFileComponent],
   imports: [
     CommonModule,
 

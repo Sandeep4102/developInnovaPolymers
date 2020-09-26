@@ -9,9 +9,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { AuthService } from "../utility/auth.service";
 import { ReactiveFormsModule } from "@angular/forms";
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AllUsersComponent } from './all-users/all-users.component';
+// import { AllUsersComponent } from './all-users/all-users.component';
 @NgModule({
-  declarations: [AdminLoginComponent, AdminDashboardComponent, AllUsersComponent],
+  declarations: [AdminLoginComponent, AdminDashboardComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
