@@ -10,6 +10,8 @@ import { HeaderInterceptor } from "./utility/token.interceptor";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { SharefileModule } from "./sharefile/sharefile.module";
 import { AdminModule } from "./admin/admin.module";
+import { ToastrModule } from 'ngx-toastr';
+// import { NgxSpinnerModule } from "ngx-spinner";  
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +23,9 @@ import { AdminModule } from "./admin/admin.module";
     UserModule,
     FriendModule,
     SharefileModule,
-    AdminModule
+    AdminModule,
+    ToastrModule.forRoot(),
+    // NgxSpinnerModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true }

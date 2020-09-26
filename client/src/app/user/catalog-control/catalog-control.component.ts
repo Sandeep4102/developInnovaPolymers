@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { formattedError } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup,ReactiveFormsModule, Validators} from "@angular/forms"
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-catalog-control',
   templateUrl: './catalog-control.component.html',
@@ -13,7 +14,8 @@ public submitted : boolean = false
 
   constructor(
     private fb: FormBuilder,
-    private http : HttpClient
+    private http : HttpClient,
+    private route : Router
   ) {
     this.productForm = this.fb.group({
       "partNumber": ['',Validators.required],
@@ -57,7 +59,7 @@ public submitted : boolean = false
       uploadData.append('image', this.productForm.get('image').value);
       this.http.post("https://innove-polymers.herokuapp.com/admin/registerProd",uploadData).subscribe(data=>{
         console.log(data,"data4657890");
-      
+        this.route.navigateByUrl("Product")
       })
     }
   }

@@ -14,6 +14,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { CatalogControlComponent } from './catalog-control/catalog-control.component';
 import {MatCardModule} from '@angular/material/card';
+import { NgxSpinnerModule } from "ngx-spinner";  
 
 @NgModule({
   declarations: [
@@ -33,8 +34,10 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     RouterModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    NgxSpinnerModule
   ],
+  exports : [NgxSpinnerModule],
   providers: [AuthService]
 })
 export class UserModule {}
