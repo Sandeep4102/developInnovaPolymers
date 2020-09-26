@@ -1,11 +1,10 @@
 
 <div class="w3-content">
-	<!-- <img class="mySlides" src="../../../assets/home/bg_img.jpg" alt="custom_html_banner1" style="    width: 100%;
+	<img class="mySlides" src="../../../assets/home/bg_img.jpg" alt="custom_html_banner1" style="    width: 100%;
     max-height: 400px;
     max-width: 1714px;
-"> -->
-<img class="mySlides" src="https://i.imgur.com/ZtdhrUA.jpg" alt="custom_html_banner1" style="width:100%">
-	<img   class="mySlides" [src]="imageCar[0]" alt="custom_html_banner1" style="width:100%">
+">
+<!-- <img class="mySlides" src="../../../assets/home/bg_img.jpg" alt="custom_html_banner1" style="width:100%"> -->
 	<button class="w3-button w3-black w3-display-left" (click)="plusDivs('left')">&#10094;</button>
 	<button class="w3-button w3-black w3-display-right" (click)="plusDivs('right')">&#10095;</button>
    </div>
@@ -21,8 +20,8 @@
 	  <!-- <mat-card-title>Shiba Inu</mat-card-title>
 	  <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
 	</mat-card-header>
-	<img mat-card-image *ngIf="prod.url" style="max-height: 200px;max-width: 200px;" src={{prod.url}} alt="Photo of a Shiba Inu">
-	<img mat-card-image *ngIf="!prod.url" style="max-height: 200px;max-width: 200px;" src='../../../assets/NoImageFound.jpg' alt="Photo of a Shiba Inu">
+	<img mat-card-image *ngIf="prod.url" style="height: 200px;width: auto;" src={{prod.url}} alt="Photo of a Shiba Inu">
+	<img mat-card-image *ngIf="!prod.url" style="height: 200px;width: auto;" src='../../../assets/NoImageFound.jpg' alt="Photo of a Shiba Inu">
 	<mat-card-content>
      <div class="row">
 		 <div class="col">
@@ -51,6 +50,7 @@
 
 		 </div>
 	 </div>
+	 <button class="btn btn-danger" (click)="delete(prod)">DELETE</button>
 	</mat-card-content>
 	<mat-card-actions>
 	  <!-- <button mat-button>EDIT</button>
@@ -60,5 +60,8 @@
   </div>
   </div>
 </div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+    </ngx-spinner>   
 
   
