@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
 @Component({
   selector: "app-registeruser",
   templateUrl: "./registeruser.component.html",
-  styleUrls: ["./registeruser.component.css"]
+  styleUrls: ["./registeruser.component.scss"]
 })
 export class RegisteruserComponent implements OnInit {
   public image : any = []
