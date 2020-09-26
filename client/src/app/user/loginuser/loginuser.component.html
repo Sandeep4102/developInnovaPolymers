@@ -1,4 +1,7 @@
-<div class="navbar">
+<div class="navbar" style="  position:fixed;
+top:0;
+width:100%;
+z-index:100;">
 
   <a href="#home" class="w3-bar-item w3-button w3-padding-large"
   >HOME</a
@@ -14,21 +17,22 @@
   >PRODUCTS</a
   >
   
-<a routerLink="/aboutUs" class="w3-bar-item w3-button">About Us</a>
-<a href="#contact" class="w3-bar-item w3-button">Contact</a>
+<a routerLink="/aboutUs" class="w3-bar-item w3-button">ABOUT US</a>
+<a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
 
   
   <a
   href="javascript:void(0)"
-  class="w3-padding-large w3-hover-red w3-hide-small w3-right"
+  class="w3-padding-large w3-hover-red w3-hide-small w3-right" style="float: right;"
   ><img  style="height: 30px;width:40px" src="../../../assets/logo.png"></a>
 
 
 
 </div>
+<br>
 
 <div class="main">
-<p><br><br></p>
+
 </div>
 
 <div class="limiter">
@@ -80,6 +84,11 @@
           <span class="focus-input100">
             <fa-icon [icon]="faUser"></fa-icon>
           </span>
+          <div style="color: red;" *ngIf="submitted && f.email.errors?.required" class="invalid-feedback">
+            <div *ngIf="f.email.errors?.required">
+            <h5 style="color: red;"> Please Enter User Name </h5>
+            </div>
+          </div>
         </div>
 
         <div
@@ -96,6 +105,11 @@
           <span class="focus-input100">
             <fa-icon [icon]="faLock"></fa-icon>
           </span>
+          <div style="color: red;" *ngIf="submitted && f.password.errors?.required" class="invalid-feedback">
+            <div *ngIf="f.password.errors?.required">
+            <h5 style="color: red;"> Please Enter Password </h5>
+            </div>
+          </div>
         </div>
 
         <div class="container-login100-form-btn">

@@ -9,13 +9,15 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import {CatalogControlComponent} from "./catalog-control/catalog-control.component";
 import {AuthGuard} from '../utility/auth.guard'
+import { CatalogProductControlComponent } from './catalog-product-control/catalog-product-control.component';
 const routes: Routes = [
   { path: "login", component: LoginuserComponent },
   { path: "Product", component: RegisteruserComponent },
   { path: "verify", component: VerifyComponent },
   {path:"aboutUs",component:AboutUsComponent},
   {path:"termsConditions",component:TermsConditionsComponent},
-  {path:"catalog-control",component:CatalogControlComponent, canActivate: [AuthGuard],}
+  {path:"catalog-control",component:CatalogControlComponent, canActivate: [AuthGuard]},
+  {path : "catalog-product-control",component:CatalogProductControlComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({

@@ -1,8 +1,37 @@
+
+  <div class="navbar">
+
+   <a href="#home" class="w3-bar-item w3-button w3-padding-large"
+   >HOME</a
+   >
+   <a
+   routerLink="/login"
+   class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+   >LOGIN</a
+   >
+   <a
+   href="/Product"
+   class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+   >PRODUCTS</a
+   >
+   
+ <a routerLink="/aboutUs" class="w3-bar-item w3-button">About Us</a>
+ <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+
+ <a routerLink="/catalog-product-control" style="float: right;" class="w3-bar-item w3-button">MANAGE PRODUCTS</a>
+
+   
+   <a
+   href="javascript:void(0)"
+   class="w3-padding-large w3-hover-red w3-hide-small w3-right" style="float: right;"
+   ><img  style="height: 30px;width:40px" src="../../../assets/logo.png"></a>
+
+</div>
+
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
 
    <label><strong>Part Number</strong></label>
     <input class="form-control" type="text" formControlName="partNumber" [ngClass]="{ 'is-invalid': submitted && f.partNumber.errors }" />
-
     <div style="color: red;" *ngIf="submitted && f.partNumber.errors?.required" class="invalid-feedback">
       <div *ngIf="f.partNumber.errors?.required">
       <h5 style="color: red;"> Please enter Part Number </h5>
@@ -13,9 +42,19 @@
    <label>Type Of product</label> <input type="text" formControlName="typeOfProd">
    <label>Description</label> <input type="text" formControlName="description"> 
    <label>Image</label><input type="file" (change)="uploadDocument($event)" >
+   <div>
+      <img
+        *ngIf="img"
+        [src]="img"
+        class="rounded mb-3"
+        width="300"
+        height="250"
+      />
+    </div>
 <button type="submit">Submit</button>
 
 
     </form>
+   
     
   

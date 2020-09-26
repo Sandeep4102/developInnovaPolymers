@@ -14,7 +14,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { CatalogControlComponent } from './catalog-control/catalog-control.component';
 import {MatCardModule} from '@angular/material/card';
-import { NgxSpinnerModule } from "ngx-spinner";  
+import { NgxSpinnerModule } from "ngx-spinner";
+import { CatalogProductControlComponent } from './catalog-product-control/catalog-product-control.component';  
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     VerifyComponent,
     AboutUsComponent,
     TermsConditionsComponent,
-    CatalogControlComponent
+    CatalogControlComponent,
+    CatalogProductControlComponent
   ],
   imports: [
     CommonModule,

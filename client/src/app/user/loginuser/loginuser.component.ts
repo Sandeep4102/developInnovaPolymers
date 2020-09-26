@@ -37,15 +37,13 @@ export class LoginuserComponent implements OnInit {
       email: [
         "",
         [
-          Validators.required,
-          Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")
+          Validators.required
         ]
       ], //formfields with validations
       password: [
         "",
         [
-          Validators.required,
-          Validators.minLength(8) /* Validators.pattern('(?=.*[A-Z])') */
+          Validators.required /* Validators.pattern('(?=.*[A-Z])') */
         ]
       ]
     });
@@ -65,6 +63,8 @@ export class LoginuserComponent implements OnInit {
         } else {
           alert("oops!! that didn't work");
         }
+      },err=>{
+        alert("oops!! that didn't work");
       });
   }
   get f() {
@@ -73,16 +73,14 @@ export class LoginuserComponent implements OnInit {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    if (this.loginForm.value) {
-      this.submitted = true;
+    this.submitted = true;
+    if (this.loginForm.valid) {
 
       this.loginauth(this.loginForm.value);
       this.userName = JSON.stringify(this.loginForm.value.username);
 
       console.log(this.userName); //// containing the value of active user
       this.authservice.getUserName(this.userName);
-    } else {
-      alert("invalid form");
-    }
+    } 
   }
 }
