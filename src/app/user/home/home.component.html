@@ -17,49 +17,44 @@
       display: none;
     }
   </style>
-    <div class="background">
+
+  
+ 
+      <div class="navbar">
+
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large"
+        >HOME</a
+        >
+        <a
+        routerLink="/login"
+        class="w3-bar-item w3-button "
+        >LOGIN</a
+        >
+        <a
+        href="/Product"
+        class="w3-bar-item w3-button "
+        >PRODUCTS</a
+        >
+        
+      <a routerLink="/aboutUs" class="w3-bar-item w3-button">ABOUT US</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    
+        
+        <a
+        href="javascript:void(0)"
+         style="float: right;"
+        ><img  style="height: 30px;width:40px" src="../../../assets/logo.png"></a>
+    
+    
+    
+    </div>
+    <br>
+    <br>
      
 
     <!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-black w3-card">
-        <a
-          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-          href="javascript:void(0)"
-          onclick="myFunction()"
-          title="Toggle Navigation Menu"
-          ><i class="fa fa-bars"></i
-        ></a>
-        <a href="#home" class="w3-bar-item w3-button w3-padding-large"
-          >HOME</a
-        >
-        <a
-          routerLink="/login"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >LOGIN</a
-        >
-        <a
-          href="/Product"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >PRODUCTS</a
-        >
-        <div class="w3-dropdown-hover w3-hide-small">
-          <button class="w3-padding-large w3-button" title="More">
-            MORE <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a routerLink="/aboutUs" class="w3-bar-item w3-button">About Us</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-          </div>
-        </div>
-        
-        <a
-          href="javascript:void(0)"
-          class="w3-padding-large w3-hover-red w3-hide-small w3-right"
-          ><img  style="height: 30px;width:40px" src="../../../assets/logo.png"></a>
-      </div>
-    </div>
-
+   
+    <div class="background">
       <div
         class="w3-container w3-content w3-center w3-padding-64"
         style="max-width:800px"
@@ -113,14 +108,15 @@
 
 <!--Footer-->
         
-      <div class="bot-contact" style="color:whitesmoke">
-        <table width="80%">
-          <tr><th>
+      <div class="bot-contact" style="color:whitesmoke;">
+        <div class="row">
+   <div class="col-md-6">
         <div class="map-img">
           <img src="../../../assets/images/map.png">
         </div>
-        </th>
-        <th>
+        </div>
+       
+        <div class="col-md-6">
         <div class="info" id="contact">
           <h2>CONTACT US</h2>
           <i class="fa fa-map-marker" style="width:30px"></i>
@@ -128,10 +124,11 @@
           <i class="fa fa-phone" style="width:30px"></i> Phone: +91 98737 20410<br />
           <i class="fa fa-envelope" style="width:30px"> </i> Email: innovapolymers.fbd@gmail.com<br />
         </div>
-        </th>
-        </tr>
-        </table>
+        </div>
+    
       </div>
     </div>
+    </div>
+
 
 </html>

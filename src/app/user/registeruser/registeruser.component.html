@@ -1,3 +1,13 @@
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
 <div class="navbar" style="  position:fixed;
 top:0;
 width:100%;
@@ -20,16 +30,21 @@ z-index:100;">
 		<a routerLink="/aboutUs" class="w3-bar-item w3-button">ABOUT US</a>
 		<a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
 
+	
+		
+
 		  
 		  <a style="float: right;"
 			href="javascript:void(0)"
 			class="w3-padding-large w3-hover-red w3-hide-small w3-right"
 			><img  style="height: 30px;width:40px" src="../../../assets/logo.png"></a>
 
+	
   
   </div>
   
 <br><br>
+
 
 <div class="w3-content">
 	<img class="mySlides" src="../../../assets/home/bg_img.jpg" alt="custom_html_banner1" style="    width: 100%;
@@ -40,8 +55,28 @@ z-index:100;">
 	<button class="w3-button w3-black w3-display-left" (click)="plusDivs('left')">&#10094;</button>
 	<button class="w3-button w3-black w3-display-right" (click)="plusDivs('right')">&#10095;</button>
    </div>
+<br>
+<br>
+<div class="container">
+<div class="row">
+	<div class="col-md-6">
+		<label for="cars">Choose a Type Of Product:</label>
+		<select name="cars" id="cars" [(ngModel)]="selectTypeOfProd">
+		  <option *ngFor="let prod of typeOfProdArray" value="{{prod}}">{{prod}}</option>
+		</select><br>
+		<button class="btn btn-primary" type="button" (click)="typeOfProdDrop()" >Search</button>
 
-
+	</div>
+   <div class="col-md-6">
+	<input type="text" [(ngModel)]="partNumber" placeholder="Search.." name="search">
+	<button type="button" (click)="searchPartNumber()" [disabled]="!partNumber"><i class="fa fa-search"></i></button>
+	<button type="button" (click)="getProd()" >RESET</button>
+	</div>
+</div>
+</div>
+<br>
+<br>
+<br>
 
 <div class="container" >
 <div class="row">
