@@ -57,6 +57,7 @@ export class RegisteruserComponent implements OnInit {
     this.http.get<any>("https://innove-polymers.herokuapp.com/admin/getProductList").subscribe(data=>{
       console.log(data,"Data");
       this.objListWithProduct = []
+      this.partNumber = ''
       this.listProducts = data.docs
       // console.log(obj,"4e5r6t7y8");
       this.listProducts.forEach(element => {
